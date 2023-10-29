@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Kumbh+Sans:wght@200&family=Nunito:ital,wght@0,300;0,500;1,300;1,400&family=Poppins:wght@400;500;600;700&family=Space+Mono&display=swap');
+:root {
+  --primary: #1f3e72;
+  --secondary: rgba(255, 255, 255, 0.78);
+  --black: #131110;
+  --blue-gradient: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+  --orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+  --blue: #4066ff;
+  --lightBlue: #eeeeff;
+  --shadow: rgba(136, 160, 255, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+button{
+  background: var(--blue);
+  color: var(--lightBlue);
+  border: none;
+  font-size: 1rem;
+  padding: .2rem;
+  height: 75%;
+  border-radius: .3rem;
+  transition: all 300ms ease;
+}
+button:hover{
+  transform: scale(1.05);
+}
+.home{
+  display: flex;
+  gap: 5%;
+  height: 100%;
+  background: var(--black);
+  color: var( --lightBlue);
+}
+.left-h{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.right-h{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h2{
+   color: #ff922d;
+   font-size: 2rem;
+}
+h4{
+  color: #4066ff;
+  font-size: 1.5rem;
+}
