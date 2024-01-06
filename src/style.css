@@ -129,33 +129,6 @@
 .navigation>.links>a:hover{
     color: var(--blue);
 }
-.residence{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10rem;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: var(--blue-gradient);
-    padding: 1rem;
-    color: aliceblue;
-    border-radius: .8rem;
-}
-.price>span{
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-.name{
-    font-size: 2rem;
-    color: var(--primary);
-}
-.detail{
-    color: var(--secondary);
-}
 #value{
     display: flex;
     flex-direction: row;
@@ -255,7 +228,7 @@
     display: none;
 }
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.container1 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -284,6 +257,7 @@
     position: absolute;
     top: 50%;
     width: auto;
+    height: 60px;
     padding: 16px;
     margin-top: -50px;
     color: #000;
@@ -439,7 +413,31 @@
         height: 100%;
         
      } 
-    
+     .container1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        /* margin-top: .1rem; */
+        
+      }
+      .mySlides{
+        position: relative;
+        margin: .1rem;
+        top: 10%;
+        height: 50rem;
+        width: 100%;
+      }
+      .caption-container,
+      .row{
+        position: relative;
+        top: 40%;
+      }
+      .prev,
+      .next{
+        top: 60%;
+      }
   }
   @media  (min-width:601px) and (max-width: 1024px){
     .navigation{
@@ -464,7 +462,7 @@
         height: fit-content;
     }
     .right-h>.image>img{
-        height: 80%;
+        height: 60%;
         margin-top: 1rem;
     }
     .residence{
@@ -488,4 +486,40 @@
         align-items: center;
         margin-top: 5rem;
     }
+    .container1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        /* margin-top: .1rem; */
+        
+      }
+      .mySlides{
+        position: relative;
+        margin: .1rem;
+        top: 25%;
+        height: 50rem;
+        width: 100%;
+      }
+      .mySlides>img{
+        height: 25rem;
+        width: 15rem;
+      }
+     
+      .prev,
+      .next{
+        top: 60%;
+      }
+      .caption-container,
+      .row{
+        position: relative;
+        top: 59%;
+      }
+      .column{
+        height: 12rem;
+      }
+     .column>img{
+        height: 100%;
+     }
   }

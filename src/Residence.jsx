@@ -9,7 +9,46 @@ const ImageSlider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
   useEffect(() => {
+    const showSlides = (n) => {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+  
+      if (n > slides.length) {
+        setSlideIndex(1);
+      }
+      if (n < 1) {
+        setSlideIndex(slides.length);
+      }
+  
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+  
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+  
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      
+      const prices = ['$50,000', '$75,000', '$60,000', '$80,000', '$90,000', '$100,000'];
+      const descriptions = [
+        'Beautiful house with a spacious backyard.',
+        'Modern design with stunning architecture.',
+        'Cozy home with scenic views of nature.',
+        'Luxurious living in a prime location.',
+        'Charming house with lots of natural light.',
+        'Spectacular and open spaces.'
+      ];
+  
+      // Set caption text based on current slide index
+      captionText.innerHTML = `<strong>Price:</strong> ${prices[slideIndex - 1]}<br/><em>${descriptions[slideIndex - 1]}</em>`;
+    };
+  
     showSlides(slideIndex);
+
   }, [slideIndex]);
 
   const plusSlides = (n) => {
@@ -27,46 +66,9 @@ const ImageSlider = () => {
     setSlideIndex(n);
   };
 
-  const showSlides = (n) => {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-
-    if (n > slides.length) {
-      setSlideIndex(1);
-    }
-    if (n < 1) {
-      setSlideIndex(slides.length);
-    }
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    
-    const prices = ['$50,000', '$75,000', '$60,000', '$80,000', '$90,000', '$100,000'];
-    const descriptions = [
-      'Beautiful house with a spacious backyard.',
-      'Modern design with stunning architecture.',
-      'Cozy home with scenic views of nature.',
-      'Luxurious living in a prime location.',
-      'Charming house with lots of natural light.',
-      'Spectacular and open spaces.'
-    ];
-
-    // Set caption text based on current slide index
-    captionText.innerHTML = `<strong>Price:</strong> ${prices[slideIndex - 1]}<br/><em>${descriptions[slideIndex - 1]}</em>`;
-  };
-
+ 
   return (
-    <div className="container">
+    <div className="container1">
       {/* Your JSX for slides, buttons, and thumbnails */}
       {Array.from({ length: 6 }, (_, index) => (
         <div key={index} className="mySlides">
@@ -82,12 +84,12 @@ const ImageSlider = () => {
       ))}
 
       {/* Next and previous buttons */}
-      <a className="prev" onClick={() => plusSlides(-1)}>
+      <button className="prev" onClick={() => plusSlides(-1)}>
         &#10094;
-      </a>
-      <a className="next" onClick={() => plusSlides(1)}>
+      </button>
+      <button className="next" onClick={() => plusSlides(1)}>
         &#10095;
-      </a>
+      </button>
 
       {/* Image text */}
       <div className="caption-container">
