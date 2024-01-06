@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import {ImCross} from 'react-icons/im'
 import {TiTickOutline} from 'react-icons/ti'
-import house1 from './images/house1.jpg'
+import House2 from './images/House2.jpg'
 import './style.css'
 
 const Value = () => {
@@ -48,7 +48,7 @@ const Value = () => {
         <div className='home'>
             <div className='left-h'>
               <div className="image">
-                <img src={house1} alt="" />
+                <img src={House2} alt="" />
               </div>
             </div>
             <div className='right-h'>
