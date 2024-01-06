@@ -17,11 +17,11 @@ const Navbar = ({ handleNavClick }) => {
         {menuOpened=== false && mobile === true ?(<div className="menu-icon" onClick={()=>setMenuOpened(true)}>
           <HiMenu size={30}/></div>):( 
         <div className="links">
-          <a href="#" onClick={() => {handleNavClick("home"); setMenuOpened(false);}}>Home</a>
-          <a href="#" onClick={() => {handleNavClick("residence");setMenuOpened(false);}}>Residence</a>
-          <a href="#" onClick={() => {handleNavClick("value");setMenuOpened(false);}}>Value</a>
-          <a href="#" onClick={() => {handleNavClick("contact");setMenuOpened(false);}}>Contact</a>
-          <a href="#" onClick={() => {handleNavClick("get");setMenuOpened(false);}}>Get Started</a>
+          <button type="button" onClick={() => {handleNavClick("home"); setMenuOpened(false);}}>Home</button>
+          <button type="button" onClick={() => {handleNavClick("residence");setMenuOpened(false);}}>Residence</button>
+          <button type="button" onClick={() => {handleNavClick("value");setMenuOpened(false);}}>Value</button>
+          <button type="button" onClick={() => {handleNavClick("contact");setMenuOpened(false);}}>Contact</button>
+          <button type="button" onClick={() => {handleNavClick("get");setMenuOpened(false);}}>Get Started</button>
         </div>)}
       </div>
     </OutsideClickHandler>
